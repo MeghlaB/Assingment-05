@@ -49,7 +49,7 @@ document.getElementById("secondBtn").addEventListener("click",function(){
 
     const closeBtn = getFiledBtn("congrast1")
     
-    closeBtn.className ="absolute top- left-18 w-[350] lg:w-[500px] h-[300px] mx-auto border border-2px bg-white drop-shadow rounded-2xl"
+    closeBtn.className = "absolute top- left-18 w-[350] lg:w-[500px] h-[300px] mx-auto border border-2px bg-white drop-shadow rounded-2xl"
     closeBtn.classList.remove("hidden")
   
     //close popUp remove
@@ -64,6 +64,27 @@ document.getElementById("secondBtn").addEventListener("click",function(){
 
 document.getElementById("thirdBtn").addEventListener("click",function(){
     const text = getInputFiled("inputFiled");
+    const Blance = parseFloat(document.getElementById("Amount").innerText)
+    if(isNaN(text) || text>Blance){
+        return alert ("Invalid Input")
+    }
+    const totalBlance = Blance - text 
+    document.getElementById("thirdBlance").innerText = totalBlance
 
+    const amount = parseFloat(document.getElementById("Amount").innerText)
+    const Amount = amount + text 
+    document.getElementById("Amount").innerText = Amount
     
+    const remove = getFiledBtn("congrast2")
+    remove.className =(
+        "absolute top- left-18 w-[350] lg:w-[500px] h-[300px] mx-auto border border-2px bg-white drop-shadow rounded-2xl"
+    )
+    remove.classList.remove("hidden")
+
+    //close popup hide
+    document.getElementById("closeBtn2").
+    addEventListener("click",function(){
+        const remove1 = getFiledBtn("congrast2")
+        remove1.classList.add("hidden")
+    })
 })
