@@ -34,8 +34,7 @@
 <body class="text-lexend">
     <header class="">
         <!-- Navar Section -->
-      <nav class="sticky">
-        <div class="navbar bg-navBg px-5 lg:px-16 lg:py-6 ">
+        <div class="sticky z-10 top-0 navbar bg-navBg px-5 lg:px-16 lg:py-6 ">
           <div class="navbar-start">
             <a class="btn btn-ghost bg-praimary text-xl text-text font-bold leading-6">Blog</a>
           </div>
@@ -49,17 +48,16 @@
             )] text-[18px] font-medium"><Span>5500</Span>BDT</p>
           </div>
         </div>
-      </nav>
          <!-- Button  -->
-      <div class="text-center py-14 ">
+      <div class="text-center py-14 sticky top-32  ">
         <button id="donationBtn" class="btn bg-praimary px-7 lg:px-14 py-2 text-text text-xl font-bold ">Donation</button>
         <button id="historyBtn" class="btn  px-7 lg:px-14 py-2 text-text text-xl font-bold  ">History</button>
       </div>
     </header>
     <!-- main section -->
     <main>
-      <section class="container mx-auto ">
-        <div class="px-3 lg:px-0 space-y-7 lg:space-y-7">
+      <section class="container mx-auto z-0 ">
+        <div class="px-3 lg:px-0 space-y-7 lg:space-y-7 ">
           <!-- Donate for Flood at Noakhali, Bangladesh -->
           <div class=" relative border border-2px border-gray-400 rounded-lg py-6 px-8 lg:flex items-center justify-around ">
             <div class=" relative ">
@@ -100,7 +98,10 @@
                   The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
                 </p>
                 <div class="space-y-4 lg:space-y-5">
-                  <input id="fristInputFiled" class="w-full h-10 pl-5 rounded-lg" type="text" placeholder="Write Donation Amount"> <br>
+                  <input
+                  type="text"
+                  placeholder="Write Donation Amount"
+                  class="input input-bordered input-md w-full  border-3px h-11 text-xl" /><br>
                 <button id="fristDonateBtn" class="btn bg-praimary w-full text-xl font-bold">Donat Now</button>
                 </div>
                 <!-- Congrast -->
@@ -121,19 +122,35 @@
                   </div>
                 </div> 
             </div>
-          
           </div>
           <!-- Donate for Flood Relief in Feni,Bangladesh-->
           <div class=" border border-2px border-gray-400 rounded-lg py-6 px-8 lg:flex items-center justify-around ">
             <div class=" ">
               <img class="" src="./assets/feni.png" alt="">
             </div>
+             <!-- Congrast -->
+             <div id="congrast1" class=" hidden  ">
+              <div class="text-center py-4 space-y-4">
+                <h1 class="text-[rgba(17, 17, 17, 0.7
+                )] text-4xl font-extrabold opacity-">Congrast!</h1>
+                <div class="flex items-center justify-center">
+                  <img class="w-9" src="./assets/coin.png" alt="">
+                </div> 
+                <div>
+                  <h1 class="text-xl text-gray-500">You Have Donated For HumanKind</h1>
+                </div>
+                <div>
+                  <h1 class="text-text text-2xl font-extrabold ">Successfully</h1>
+                </div>
+                <button id="closeBtn1" class="btn px-8 py-2 text-xl text-gray-500">close confirmation</button>
+              </div>
+              </div> 
             <!-- text-content -->
             <div class=" lg:w-1/2 lg:space-y-8 ">
                 <button class="flex items-center btn text-[rgba(17, 17, 17, 0.7
                 )]">
                   <img src="./assets/coin.png" alt="">
-                  <p>
+                  <p id="secondBlance" class="text-xl font-medium">
                     <span>600</span>
                     BDT
                   </p>
@@ -146,8 +163,12 @@
                   The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
                 </p>
                 <div class="space-y-4 lg:space-y-5">
-                  <input class="w-full h-10 pl-5 rounded-lg" type="text" placeholder="Write Donation Amount"> <br>
-                <button class="btn bg-praimary w-full text-xl font-bold">Donat Now</button>
+                  <input
+                    id="secondinputFiled"
+                    type="text"
+                    placeholder="Write Donation Amount"
+                    class="input input-bordered input-md w-full border-3px h-11 text-xl" />
+                  <button id="secondBtn" class="btn bg-praimary w-full text-xl font-bold">Donat Now</button>
                 </div>
             </div>
           </div>
@@ -156,12 +177,29 @@
             <div class=" ">
               <img class="" src="./assets/quota-protest.png" alt="">
             </div>
+             <!-- Congrast -->
+             <div id="congrast2" class=" hidden  ">
+              <div class="text-center py-4 space-y-4">
+                <h1 class="text-[rgba(17, 17, 17, 0.7
+                )] text-4xl font-extrabold ">Congrast!</h1>
+                <div class="flex items-center justify-center">
+                  <img class="w-9" src="./assets/coin.png" alt="">
+                </div> 
+                <div>
+                  <h1 class="text-xl text-gray-500">You Have Donated For HumanKind</h1>
+                </div>
+                <div>
+                  <h1 class="text-text text-2xl font-extrabold ">Successfully</h1>
+                </div>
+                <button id="closeBtn" class="btn px-8 py-2 text-xl text-gray-500">close confirmation</button>
+              </div>
+              </div> 
             <!-- text-content -->
-            <div class=" lg:w-1/2 lg:space-y-8 ">
+             <div class=" lg:w-1/2 lg:space-y-8 ">
                 <button class="flex items-center btn text-[rgba(17, 17, 17, 0.7
                 )]">
                   <img src="./assets/coin.png" alt="">
-                  <p>
+                  <p class="text-xl font-medium">
                     <span>600</span>
                     BDT
                   </p>
@@ -174,8 +212,12 @@
                   The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
                 </p>
                 <div class="space-y-4 lg:space-y-5">
-                  <input class="w-full h-10 pl-5 rounded-lg" type="text" placeholder="Write Donation Amount"> <br>
-                <button class="btn bg-praimary w-full text-xl font-bold">Donat Now</button>
+                  <input
+                  id="inputFiled"
+                  type="text"
+                  placeholder="Write Donation Amount"
+                  class="input input-bordered input-md w-full  border-3px h-11 text-xl" /> <br>
+                <button id="thirdBtn" class="btn bg-praimary w-full text-xl font-bold">Donat Now</button>
                 </div>
             </div>
           </div>
