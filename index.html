@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donate Bangladesh</title>
     <!-- TailwindCDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <!-- FontaFamily -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +19,9 @@
             extend: {
               colors: {
                 clifford: '#da373d',
-                praimary:'#B4F461'
+                praimary:'#B4F461',
+                navBg:'#F9F7F3',
+                text:'rgb(17, 17, 17);'
               },
               fontFamily:{
                 lexend:"Lexend",
@@ -28,6 +32,28 @@
       </script>
 </head>
 <body class="text-lexend">
-    <h1 class="text-praimary">hello</h1>
+    <header class="fixed">
+        <!-- Navar Section -->
+        <div class="navbar bg-navBg px-5 lg:px-16 lg:py-6">
+          <div class="navbar-start">
+            <a class="btn btn-ghost bg-praimary text-xl text-text font-bold leading-6">Blog</a>
+          </div>
+          <div class="navbar-center hidden lg:flex gap-3">
+            <img class="w-8" src="./assets/logo.png" alt="">
+            <h1 class="text-text text-xl text-text font-bold leading-6 ">Donate Bangladesh</h1>
+          </div>
+          <div class="navbar-end gap-3">
+            <img src="./assets/coin.png" alt="">
+            <p class="text-[rgba(17, 17, 17, 0.7
+            )]"><Span>5500</Span>BDT</p>
+          </div>
+        </div>
+         <!-- Button  -->
+      <div class="text-center py-14 ">
+        <button class="btn bg-praimary">Donation</button>
+        <button class="btn  ">History</button>
+      </div>
+    </header>
+  
 </body>
 </html>
