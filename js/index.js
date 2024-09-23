@@ -1,12 +1,12 @@
 
 
 //Donate for Flood at Noakhali, Bangladesh
-
 document.getElementById("fristDonateBtn").
 addEventListener("click",function(){
     const text = getInputFiled("fristInputFiled")
     const Blance = parseFloat(document.getElementById("fristBlance").innerText)
-    if(isNaN(text) || text>Blance){
+    const title = (document.getElementById("fristTitle").innerText)
+    if(isNaN(text) || text>Blance || text<=0){
        return alert("Invalid Input")
     }
     else{
@@ -30,7 +30,14 @@ addEventListener("click",function(){
     vidssible.classList.add("hidden")
    })
 
- 
+   const historyItem = document.createElement("div")
+   historyItem.className = "bg-white shadow-sm border border-2px border-gray-200 rounded-2xl py-6 px-8 items-center gap-3"
+
+   historyItem.innerHTML =`
+    <h1 class= "text-2xl text-black font-bold space-x-0 text-justify">${text.toFixed()} Taka is ${title}</h1>
+    <p>Date ${new Date().toLocaleTimeString()}</p>
+   `
+   document.getElementById("historySection").appendChild(historyItem)
 })
 
 // Donate for Flood Relief in Feni,Bangladesh
@@ -38,6 +45,7 @@ addEventListener("click",function(){
 document.getElementById("secondBtn").addEventListener("click",function(){
     const text = getInputFiled("secondinputFiled")
     const Blance =parseFloat(document.getElementById("secondBlance").innerText)
+    const title = document.getElementById("titleFiled").innerText
     if(isNaN(text) || text>Blance){
        return alert("Invalid Input")
     }
@@ -57,6 +65,14 @@ document.getElementById("secondBtn").addEventListener("click",function(){
         const removeBtn = getFiledBtn("congrast1")
         removeBtn.classList.add('hidden')
     })
+    const historyItem = document.createElement("div")
+    historyItem.className = "bg-white shadow-sm border border-2px border-gray-200 rounded-2xl py-6 px-8 items-center "
+ 
+    historyItem.innerHTML =`
+     <h1 class= "text-2xl text-black font-bold space-x-0 text-justify">${text.toFixed()} Taka is ${title}</h1>
+     <p>Date ${new Date().toLocaleTimeString()}</p>
+    `
+    document.getElementById("historySection").appendChild(historyItem)
     
 })
 //Aid for Injured in the Quota Movement
@@ -64,6 +80,7 @@ document.getElementById("secondBtn").addEventListener("click",function(){
 document.getElementById("thirdBtn").addEventListener("click",function(){
     const text = getInputFiled("inputFiled");
     const Blance = parseFloat(document.getElementById("Amount").innerText)
+    const title = document.getElementById("thirdTitle" ).innerText
     if(isNaN(text) || text>Blance){
         return alert ("Invalid Input")
     }
@@ -86,4 +103,37 @@ document.getElementById("thirdBtn").addEventListener("click",function(){
         const remove1 = getFiledBtn("congrast2")
         remove1.classList.add("hidden")
     })
+    const historyItem = document.createElement("div")
+    historyItem.className = "bg-white shadow-sm border border-2px border-gray-200 rounded-2xl py-6 px-8 items-center "
+ 
+    historyItem.innerHTML =`
+     <h1 class= "text-2xl text-black font-bold space-x-0 text-justify">${text.toFixed()} Taka is ${title}</h1>
+     <p>Date ${new Date().toLocaleTimeString()}</p>
+    `
+    document.getElementById("historySection").appendChild(historyItem)
+})
+
+//History
+
+const historyBtn = document.getElementById("historyBtn")
+const donationBtn = document.getElementById("donationBtn")
+historyBtn.addEventListener("click",function(){
+    
+    historyBtn.classList.add('bg-praimary')
+    historyBtn.classList.remove('bg-white')
+    
+    donationBtn.classList.remove('bg-praimary')
+    donationBtn.classList.add('bg-white')
+
+    document.getElementById("cardSection").classList.add("hidden")
+})
+//dontation
+donationBtn.addEventListener("click",function(){
+    
+    donationBtn.classList.add('bg-praimary')
+    donationBtn.classList.remove('bg-white')
+    
+    historyBtn.classList.remove('bg-praimary')
+    historyBtn.classList.add('bg-white')
+    document.getElementById("cardSection").classList.remove("hidden")
 })

@@ -50,13 +50,13 @@
         </div>
          <!-- Button  -->
       <div class="text-center py-14 sticky top-32 backdrop-blur-lg backdrop-saturate-50">
-        <button id="donationBtn" class="btn bg-praimary px-7 lg:px-14 py-2 text-text text-xl font-bold ">Donation</button>
-        <button id="historyBtn" class="btn bg-white  px-7 lg:px-14 py-2 text-text text-xl font-bold  ">History</button>
+        <button id="donationBtn" class="btn bg-praimary px-7 lg:px-14 py-2 text-text text-xl font-bold  duration-200 ">Donation</button>
+        <button id="historyBtn" class="btn bg-white  px-7 lg:px-14 py-2 text-text text-xl font-bold ">History</button>
       </div>
     </header>
     <!-- main section -->
     <main>
-      <section class="container mx-auto z-0 mb-4 ">
+      <section id="cardSection" class="container mx-auto z-0 mb-4 ">
         <div class="px-3 lg:px-0 space-y-7 lg:space-y-7 ">
           <!-- Donate for Flood at Noakhali, Bangladesh -->
           <div class=" relative border border-2px border-gray-400 rounded-lg py-6 px-8 lg:flex items-center justify-around ">
@@ -90,7 +90,7 @@
                     BDT
                   </p>
                 </button>
-                <h1 class="text-2xl font-bold leading-8">
+                <h1 id="fristTitle" class="text-2xl font-bold leading-8">
                   Donate for Flood at Noakhali, Bangladesh
                 </h1>
                 <p class="text-[18px] text-[rgba(17, 17, 17, 0.7
@@ -103,7 +103,7 @@
                   type="text"
                   placeholder="Write Donation Amount"
                   class="input input-bordered input-md w-full  border-3px py-4 text-xl mt-3 mb-2 lg:mt-0 lg:mb-0 " /><br>
-                <button id="fristDonateBtn" class="btn bg-praimary w-full text-xl font-bold">Donat Now</button>
+                <button id="fristDonateBtn" class="btn bg-praimary w-full text-xl font-bold ">Donat Now</button>
                 </div>
             </div>
           </div>
@@ -139,7 +139,7 @@
                     BDT
                   </p>
                 </button>
-                <h1 class="text-2xl font-bold leading-8">
+                <h1 id="titleFiled" class="text-2xl font-bold leading-8">
                   Donate for Flood Relief in Feni,Bangladesh
                 </h1>
                 <p class="text-[18px] text-[rgba(17, 17, 17, 0.7
@@ -188,7 +188,7 @@
                     BDT
                   </p>
                 </button>
-                <h1 class="text-2xl font-bold leading-8">
+                <h1 id="thirdTitle" class="text-2xl font-bold leading-8">
                   Aid for Injured in the Quota Movement
                 </h1>
                 <p class="text-[18px] text-[rgba(17, 17, 17, 0.7
@@ -207,11 +207,14 @@
           </div>
         </div>
       </section>
- 
-    
-     
+      <!-- Histroy -->
+       <section id="historySection" class="container mx-auto mb-4 space-y-5">
+          
+       </section>
     </main>
-
+    <footer class=" bg-navBg h-20 mb-0 ">
+      
+    </footer>
    
   <script src="./js/index.js"></script>
   <script src="./js/Utilizes.js"></script>
