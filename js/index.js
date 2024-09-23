@@ -35,7 +35,7 @@ addEventListener("click",function(){
 
    historyItem.innerHTML =`
     <h1 class= "text-2xl text-black font-bold space-x-0 text-justify">${text.toFixed()} Taka is ${title}</h1>
-    <p>Date ${new Date().toLocaleTimeString()}</p>
+    <p>Date ${new Date().toString()}</p>
    `
    document.getElementById("historySection").appendChild(historyItem)
 })
@@ -70,7 +70,7 @@ document.getElementById("secondBtn").addEventListener("click",function(){
  
     historyItem.innerHTML =`
      <h1 class= "text-2xl text-black font-bold space-x-0 text-justify">${text.toFixed()} Taka is ${title}</h1>
-     <p>Date ${new Date().toLocaleTimeString()}</p>
+     <p>Date ${new Date().toString()}</p>
     `
     document.getElementById("historySection").appendChild(historyItem)
     
@@ -108,7 +108,7 @@ document.getElementById("thirdBtn").addEventListener("click",function(){
  
     historyItem.innerHTML =`
      <h1 class= "text-2xl text-black font-bold space-x-0 text-justify">${text.toFixed()} Taka is ${title}</h1>
-     <p>Date ${new Date().toLocaleTimeString()}</p>
+     <p>Date ${new Date().toString()}</p>
     `
     document.getElementById("historySection").appendChild(historyItem)
 })
