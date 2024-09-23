@@ -1,5 +1,4 @@
 
-
 //Donate for Flood at Noakhali, Bangladesh
 document.getElementById("fristDonateBtn").
 addEventListener("click",function(){
