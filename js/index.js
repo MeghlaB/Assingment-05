@@ -10,14 +10,10 @@ addEventListener("click",function(){
     if(isNaN(text) || text<=0){
        return alert("Invalid Input")
     }
-    else if(text >= amount || amount <=text){
-        return alert("Invalid Input")
-    }
     else{
     const subsblance= Blance + text
     document.getElementById("fristBlance").innerText=subsblance
 
-  
     const totalBlance = amount - text
 
     document.getElementById("Amount").innerText = totalBlance
@@ -56,9 +52,6 @@ document.getElementById("secondBtn").addEventListener("click",function(){
     const title = document.getElementById("titleFiled").innerText
     if(isNaN(text)  || text<=0){
        return alert("Invalid Input")
-    }
-    else if(text >= amount || amount <=text){
-        return alert("Invalid Input")
     }
     else{
         const totalBlance = Blance + text;
@@ -101,14 +94,9 @@ document.getElementById("thirdBtn").addEventListener("click",function(){
     if(isNaN(text) || text<=0){
         return alert ("Invalid Input")
     }
-    else if(text>=amount || amount <=text ){
-        return alert("Invalid Input")
-    }
     else{
         const totalBlance = Blance + text 
         document.getElementById("thirdBlance").innerText = totalBlance
-    
-       
         const Amount = amount - text 
         document.getElementById("Amount").innerText = Amount
         
@@ -118,8 +106,6 @@ document.getElementById("thirdBtn").addEventListener("click",function(){
         )
         remove.classList.remove("hidden")
     }
-
-
     //close popup hide
     document.getElementById("closeBtn2").
     addEventListener("click",function(){
@@ -148,7 +134,6 @@ historyBtn.addEventListener("click",function(){
     historyBtn.classList.remove('bg-white')
     donationBtn.classList.remove('bg-praimary')
     donationBtn.classList.add('bg-white')
-    // document.getElementById("historySection").classList.remove("hidden")
     document.getElementById("historySection").classList.remove("hidden")
     document.getElementById("cardSection").classList.add("hidden")
 })
