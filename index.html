@@ -34,29 +34,29 @@
 <body class="text-lexend">
     <header class="sticky z-[5] lg:z-10 top-0 bg-navBg lg:pb-5 bg-transparent ">
         <!-- Navar Section -->
-        <div class="navbar bg-navBg px-5 lg:px-16 lg:py-6 ">
+        <div class="navbar bg-navBg px-5 lg:px-16 lg:py-6 gap-3 lg:gap-0 ">
           <div class="navbar-start">
             <a class="btn btn-ghost bg-praimary text-xl text-text font-bold leading-6">Blog</a>
           </div>
-          <div class="navbar-center hidden lg:flex gap-3">
-            <img class="w-8" src="./assets/logo.png" alt="">
-            <h1 class="text-text text-xl text-text font-bold leading-6 ">Donate Bangladesh</h1>
+          <div class="navbar-center  lg:flex  lg:gap-3  lg:mr-0 ">
+            <img class="w-4 lg:w-8" src="./assets/logo.png" alt="">
+            <h1 class="text-text text-xs lg:text-xl text-text font-bold leading-3 lg:leading-6 ">Donate Bangladesh</h1>
           </div>
-          <div class="navbar-end gap-3">
+          <div class="navbar-end  lg:gap-3">
             <img src="./assets/coin.png" alt="">
             <p id="Amount" class="text-[rgba(17, 17, 17, 0.7
-            )] text-[18px] font-medium"><Span>5500</Span>BDT</p>
+            )] text-xs lg:text-[18px] font-medium"><Span>5500</Span>BDT</p>
           </div>
         </div>
          <!-- Button  -->
-      <div class="text-center py-10 sticky top-32 backdrop-blur-lg backdrop-saturate-50">
+      <div class="text-center py-14 sticky top-32 backdrop-blur-lg backdrop-saturate-50">
         <button id="donationBtn" class="btn bg-praimary px-7 lg:px-14 py-2 text-text text-xl font-bold ">Donation</button>
         <button id="historyBtn" class="btn bg-white  px-7 lg:px-14 py-2 text-text text-xl font-bold  ">History</button>
       </div>
     </header>
     <!-- main section -->
     <main>
-      <section class="container mx-auto z-0 ">
+      <section class="container mx-auto z-0 mb-4 ">
         <div class="px-3 lg:px-0 space-y-7 lg:space-y-7 ">
           <!-- Donate for Flood at Noakhali, Bangladesh -->
           <div class=" relative border border-2px border-gray-400 rounded-lg py-6 px-8 lg:flex items-center justify-around ">
@@ -99,28 +99,12 @@
                 </p>
                 <div class="space-y-4 lg:space-y-5">
                   <input
+                  id="fristInputFiled"
                   type="text"
                   placeholder="Write Donation Amount"
-                  class="input input-bordered input-md w-full  border-3px h-11 text-xl mt-3 mb-2 lg:mt-0 lg:mb-0 " /><br>
+                  class="input input-bordered input-md w-full  border-3px py-4 text-xl mt-3 mb-2 lg:mt-0 lg:mb-0 " /><br>
                 <button id="fristDonateBtn" class="btn bg-praimary w-full text-xl font-bold">Donat Now</button>
                 </div>
-                <!-- Congrast -->
-                <div id="congrast" class="hidden w-[500px] h-[300px] mx-auto border border-2px bg-white drop-shadow rounded-2xl ">
-                  <div class="text-center py-4 space-y-4">
-                    <h1 class="text-[rgba(17, 17, 17, 0.7
-                    )] text-4xl font-extrabold opacity-">Congrast!</h1>
-                    <div class="flex items-center justify-center">
-                      <img class="w-9" src="./assets/coin.png" alt="">
-                    </div> 
-                    <div>
-                      <h1 class="text-xl text-gray-500">You Have Donated For HumanKind</h1>
-                    </div>
-                    <div>
-                      <h1 class="text-text text-2xl font-extrabold ">Successfully</h1>
-                    </div>
-                    <button class="btn px-8 py-2 text-xl text-gray-500">close confirmation</button>
-                  </div>
-                </div> 
             </div>
           </div>
           <!-- Donate for Flood Relief in Feni,Bangladesh-->
@@ -167,7 +151,7 @@
                     id="secondinputFiled"
                     type="text"
                     placeholder="Write Donation Amount"
-                    class="input input-bordered input-md w-full border-3px h-11 text-xl mt-3 mb-2 lg:mt-0 lg:mb-0 " />
+                    class="input input-bordered input-md w-full border-3px  py-4  text-xl mt-3 mb-2 lg:mt-0 lg:mb-0 " />
                   <button id="secondBtn" class="btn bg-praimary w-full text-xl font-bold">Donat Now</button>
                 </div>
             </div>
@@ -216,7 +200,7 @@
                   id="inputFiled"
                   type="text"
                   placeholder="Write Donation Amount"
-                  class="input input-bordered input-md w-full  border-3px h-11 text-xl mt-3 mb-2 lg:mt-0 lg:mb-0 " /> <br>
+                  class="input input-bordered input-md w-full  border-3px  py-4  text-xl mt-3 mb-2 lg:mt-0 lg:mb-0 " /> <br>
                 <button id="thirdBtn" class="btn bg-praimary w-full text-xl font-bold">Donat Now</button>
                 </div>
             </div>

@@ -2,7 +2,7 @@
 
 //Donate for Flood at Noakhali, Bangladesh
 
-document.getElementById("fristDonateBtn" ).
+document.getElementById("fristDonateBtn").
 addEventListener("click",function(){
     const text = getInputFiled("fristInputFiled")
     const Blance = parseFloat(document.getElementById("fristBlance").innerText)
@@ -59,7 +59,6 @@ document.getElementById("secondBtn").addEventListener("click",function(){
     })
     
 })
-
 //Aid for Injured in the Quota Movement
 
 document.getElementById("thirdBtn").addEventListener("click",function(){
