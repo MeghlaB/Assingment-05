@@ -10,11 +10,11 @@ addEventListener("click",function(){
        return alert("Invalid Input")
     }
     else{
-    const subsblance= Blance - text
+    const subsblance= Blance + text
     document.getElementById("fristBlance").innerText=subsblance
 
     const amount =  parseFloat(document.getElementById("Amount").innerText)
-    const totalBlance = text + amount
+    const totalBlance = amount - text
 
     document.getElementById("Amount").innerText = totalBlance
 
@@ -49,10 +49,10 @@ document.getElementById("secondBtn").addEventListener("click",function(){
     if(isNaN(text) || text>Blance){
        return alert("Invalid Input")
     }
-    const totalBlance = Blance - text;
+    const totalBlance = Blance + text;
     document.getElementById("secondBlance").innerText=totalBlance
     const amount = parseFloat(document.getElementById("Amount").innerText)
-    const availbleBlance = totalBlance + amount
+    const availbleBlance = amount - totalBlance 
     document.getElementById("Amount").innerText=availbleBlance
 
     const closeBtn = getFiledBtn("congrast1")
@@ -84,11 +84,11 @@ document.getElementById("thirdBtn").addEventListener("click",function(){
     if(isNaN(text) || text>Blance){
         return alert ("Invalid Input")
     }
-    const totalBlance = Blance - text 
+    const totalBlance = Blance + text 
     document.getElementById("thirdBlance").innerText = totalBlance
 
     const amount = parseFloat(document.getElementById("Amount").innerText)
-    const Amount = amount + text 
+    const Amount = amount - text 
     document.getElementById("Amount").innerText = Amount
     
     const remove = getFiledBtn("congrast2")
