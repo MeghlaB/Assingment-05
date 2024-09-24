@@ -33,12 +33,13 @@ addEventListener("click",function(){
     if(isNaN(text) || text<=0 ){
        return alert("Invalid Input")
     }
-    if(amount <= text || amount < 0){
-        return alert("Not Money This Account")
+    if(amount < text){
+        alert("Not Money This Account")
+        return 
     }
     else{
-    const subsblance= Blance + text
-    document.getElementById("fristBlance").innerText=subsblance
+    const subsblance = Blance + text
+    document.getElementById("fristBlance").innerText = subsblance
 
     const totalBlance = amount - text
     document.getElementById("Amount").innerText = totalBlance
@@ -46,9 +47,7 @@ addEventListener("click",function(){
     }
     const historyContainar = document.getElementById("historySection")
     const historyItem = document.createElement("div")
-    // historyItem.className = "bg-white shadow-sm border border-2px border-gray-200 rounded-2xl py-6 px-8 items-center gap-3"
-
-    historyItem.innerHTML +=`
+    historyItem.innerHTML =`
         <div class="border-2 p-5 rounded-xl mt-4 space-y-4">
               <h1 class="text-2xl font-bold" >${text.toFixed(2)} ${title}</h1>
               <p class="text-xl py-3 px-4 bg-red-50 rounded-lg">Date: ${new Date().toString()}</p>
@@ -56,13 +55,9 @@ addEventListener("click",function(){
     `
     historyContainar.insertBefore(historyItem, historyContainar.fristChild)
     document.getElementById("my_modal_1").showModal();
-    
-document.getElementById("closeBtn").addEventListener("click",function(){
-    document.getElementById("my_modal_1").close();
-})
 
 })
-
+ 
 
 // Donate for Flood Relief in Feni,Bangladesh
  document.getElementById("secondBtn").addEventListener("click",function(){
@@ -71,50 +66,51 @@ document.getElementById("closeBtn").addEventListener("click",function(){
      const Blance =parseFloat(document.getElementById("secondBlance").innerText)
      const amount = parseFloat(document.getElementById("Amount").innerText)
      const title = document.getElementById("titleFiled").innerText
-     if(isNaN(text)  || text<=0 ){
-        return alert("Invalid Input")
-     }
-     if(amount <= text || amount < 0){
-         return alert("Not Money This Account")
-     }
-     else{
-         const totalBlance = Blance + text;
-         document.getElementById("secondBlance").innerText=totalBlance
+    
+     
+      if(isNaN(text)  || text<= 0 ){
+         return alert("Invalid Input")
+      }
+      if(amount < text){
+        alert("Not Money This Account")
+        return 
+    }
+      else{
+          const totalBlance = Blance + text;
+          document.getElementById("secondBlance").innerText = totalBlance
       
-         const availbleBlance = amount - totalBlance 
-         document.getElementById("Amount").innerText=availbleBlance
+          const availbleBlance = amount - text 
+         document.getElementById("Amount").innerText= availbleBlance
         
-         document.getElementById("Amount").innerText = totalBlance
+         //  document.getElementById("Amount").innerText = totalBlance
+          const historyContainar = document.getElementById("historySection")
+         const historyItem = document.createElement("div")
+         historyItem.innerHTML =`
+             <div class="border-2 p-5 rounded-xl mt-4 space-y-4">
+                 <h1 class="text-2xl font-bold">${text.toFixed(2)} ${title}</h1>
+                 <p class="text-xl py-3 px-4 bg-red-50 rounded-lg">Date: ${new Date().toString()}</p>
+             </div>
+         `
+         historyContainar.insertBefore(historyItem, historyContainar.fristChild)
+         document.getElementById("my_modal_1").showModal();
         
-     }
-     const historyContainar = document.getElementById("historySection")
-     const historyItem = document.createElement("div")
-     historyItem.innerHTML +=`
-         <div class="border-2 p-5 rounded-xl mt-4 space-y-4">
-               <h1 class="text-2xl font-bold">${text.toFixed(2)} ${title}</h1>
-               <p class="text-xl py-3 px-4 bg-red-50 rounded-lg">Date: ${new Date().toString()}</p>
-         </div>
-     `
-     historyContainar.insertBefore(historyItem, historyContainar.fristChild)
-     document.getElementById("my_modal_1").showModal();
-    //close modal
-    document.getElementById("closeBtn").addEventListener("click",function(){
-    document.getElementById("my_modal_1").close();
-    })
+      }
  })
+
 //Aid for Injured in the Quota Movement
 
 document.getElementById("thirdBtn").addEventListener("click",function(){
     const text = getInputFiled("inputFiled");
     document.getElementById("inputFiled").value ='';
-    const Blance = parseFloat(document.getElementById("Amount").innerText)
+    const Blance = parseFloat(document.getElementById("thirdBlance").innerText)
     const amount = parseFloat(document.getElementById("Amount").innerText)
     const title = document.getElementById("thirdTitle" ).innerText
     if(isNaN(text) || text<=0 ){
         return alert ("Invalid Input")
     }
-    if(amount <= text || amount< 0){
-        return alert("Not Money This Account")
+    if(amount < text){
+        alert("Not Money This Account")
+        return 
     }
     else{
         const totalBlance = Blance + text 
@@ -124,7 +120,7 @@ document.getElementById("thirdBtn").addEventListener("click",function(){
     }
     const historyContainar = document.getElementById("historySection")
     const historyItem = document.createElement("div")
-    historyItem.innerHTML +=`
+    historyItem.innerHTML =`
         <div class="border-2 p-5 rounded-xl mt-4 space-y-4">
               <h1 class="text-2xl font-bold">${text.toFixed(2)} ${title}</h1>
               <p class="text-xl py-3 px-4 bg-red-50 rounded-lg">Date: ${new Date().toString()}</p>
@@ -132,10 +128,7 @@ document.getElementById("thirdBtn").addEventListener("click",function(){
     `
     historyContainar.insertBefore(historyItem, historyContainar.fristChild)
     document.getElementById("my_modal_1").showModal();
-    //close modal
-    document.getElementById("closeBtn").addEventListener("click",function(){
-        document.getElementById("my_modal_1").close();
-    })
+   
     
 })
 
