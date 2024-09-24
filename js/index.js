@@ -53,7 +53,7 @@ addEventListener("click",function(){
               <p class="text-xl py-3 px-4 bg-red-50 rounded-lg">Date: ${new Date().toString()}</p>
         </div>
     `
-    historyContainar.insertBefore(historyItem, historyContainar.fristChild)
+    historyContainar.insertBefore(historyItem, historyContainar.firstChild)
     document.getElementById("my_modal_1").showModal();
 
 })
@@ -91,7 +91,7 @@ addEventListener("click",function(){
                  <p class="text-xl py-3 px-4 bg-red-50 rounded-lg">Date: ${new Date().toString()}</p>
              </div>
          `
-         historyContainar.insertBefore(historyItem, historyContainar.fristChild)
+         historyContainar.insertBefore(historyItem, historyContainar.firstChild)
          document.getElementById("my_modal_1").showModal();
         
       }
@@ -126,7 +126,7 @@ document.getElementById("thirdBtn").addEventListener("click",function(){
               <p class="text-xl py-3 px-4 bg-red-50 rounded-lg">Date: ${new Date().toString()}</p>
         </div>
     `
-    historyContainar.insertBefore(historyItem, historyContainar.fristChild)
+    historyContainar.insertBefore(historyItem, historyContainar.firstChild)
     document.getElementById("my_modal_1").showModal();
 })
 
