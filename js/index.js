@@ -10,7 +10,7 @@ addEventListener("click",function(){
     if(isNaN(text) || text<=0 ){
        return alert("Invalid Input")
     }
-    if(amount <=text){
+    if(amount <= text || amount < 0){
         return alert("Not Money This Account")
     }
     else{
@@ -56,7 +56,7 @@ document.getElementById("secondBtn").addEventListener("click",function(){
     if(isNaN(text)  || text<=0 ){
        return alert("Invalid Input")
     }
-    if(amount <= text){
+    if(amount <= text || amount < 0){
         return alert("Not Money This Account")
     }
     else{
@@ -100,7 +100,7 @@ document.getElementById("thirdBtn").addEventListener("click",function(){
     if(isNaN(text) || text<=0 ){
         return alert ("Invalid Input")
     }
-    if(amount <= text){
+    if(amount <= text || amount< 0){
         return alert("Not Money This Account")
     }
     else{
