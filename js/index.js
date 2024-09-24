@@ -7,8 +7,11 @@ addEventListener("click",function(){
     const Blance = parseFloat(document.getElementById("fristBlance").innerText)
     const amount =  parseFloat(document.getElementById("Amount").innerText)
     const title = (document.getElementById("fristTitle").innerText)
-    if(isNaN(text) || text<=0){
+    if(isNaN(text) || text<=0 ){
        return alert("Invalid Input")
+    }
+    if(amount <text){
+        return alert("Not Money This Account")
     }
     else{
     const subsblance= Blance + text
@@ -35,7 +38,7 @@ addEventListener("click",function(){
 
    historyItem.innerHTML =`
     <h1 class= "text-2xl text-black font-bold space-x-0 text-justify">${text.toFixed(2)} Taka is ${title}</h1>
-    <p>Date ${new Date().toString()}</p>
+    <p class="bg-purple-50 mt-4 rounded-md py-4 px-4">Date: ${new Date().toString()}</p>
    `
     const historyContainar = document.getElementById("historySection")
 
@@ -50,8 +53,11 @@ document.getElementById("secondBtn").addEventListener("click",function(){
     const Blance =parseFloat(document.getElementById("secondBlance").innerText)
     const amount = parseFloat(document.getElementById("Amount").innerText)
     const title = document.getElementById("titleFiled").innerText
-    if(isNaN(text)  || text<=0){
+    if(isNaN(text)  || text<=0 ){
        return alert("Invalid Input")
+    }
+    if(amount <text){
+        return alert("Not Money This Account")
     }
     else{
         const totalBlance = Blance + text;
@@ -77,7 +83,7 @@ document.getElementById("secondBtn").addEventListener("click",function(){
 
     historyItem.innerHTML =`
     <h1 class= "text-2xl text-black font-bold space-x-0 text-justify">${text.toFixed(2)} Taka is ${title}</h1>
-    <p>Date ${new Date().toString()}</p>
+    <p class="bg-purple-50 mt-4 rounded-md py-4 px-4">Date: ${new Date().toString()}</p>
 
     `
     const historyContainar = document.getElementById("historySection")
@@ -91,8 +97,11 @@ document.getElementById("thirdBtn").addEventListener("click",function(){
     const Blance = parseFloat(document.getElementById("Amount").innerText)
     const amount = parseFloat(document.getElementById("Amount").innerText)
     const title = document.getElementById("thirdTitle" ).innerText
-    if(isNaN(text) || text<=0){
+    if(isNaN(text) || text<=0 ){
         return alert ("Invalid Input")
+    }
+    if(amount <text){
+        return alert("Not Money This Account")
     }
     else{
         const totalBlance = Blance + text 
@@ -117,7 +126,7 @@ document.getElementById("thirdBtn").addEventListener("click",function(){
  
     historyItem.innerHTML =`
      <h1 class= "text-2xl text-black font-bold space-x-0 text-justify">${text.toFixed(2)} Taka is ${title}</h1>
-     <p>Date ${new Date().toString()}</p>
+     <p class="bg-purple-50 mt-4 rounded-md py-4 px-4">Date: ${new Date().toString()}</p>
     `
     const historyContainar = document.getElementById("historySection")
     historyContainar.insertBefore(historyItem, historyContainar.fristChild)
