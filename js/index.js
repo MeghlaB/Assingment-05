@@ -128,7 +128,5 @@ document.getElementById("thirdBtn").addEventListener("click",function(){
     `
     historyContainar.insertBefore(historyItem, historyContainar.fristChild)
     document.getElementById("my_modal_1").showModal();
-   
-    
 })
 
